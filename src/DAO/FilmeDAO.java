@@ -47,6 +47,25 @@ public class FilmeDAO extends ExecuteSQL{
              return null;
          }
      }
+          public List<Filme> listaTituloFilmesLikeString(String nome){
+         String sql="select titulo from filme where tituloe like '%"+nome+"%'";
+         try {
+             PreparedStatement ps=getCon().prepareStatement(sql);
+             ResultSet rs=ps.executeQuery();
+             List<Filme>lista=new ArrayList<>();
+             if(rs!=null){
+                 while(rs.next()){
+                     Filme filme=new Filme();
+                     filme.setTitulo(rs.getString(1));
+                     lista.add(filme);
+                 }
+             }
+              return lista;
+         } catch (Exception e) {
+             e.printStackTrace();
+             return null;
+         }
+     }
           public int codigoFilme(String titulo){
          String sql="select idfilme from filme where titulo='"+titulo+"'";
          try {
@@ -77,9 +96,21 @@ public class FilmeDAO extends ExecuteSQL{
                       }
                   }
               } catch (Exception e) {
-                  e.printStackTrace();
+                  return null;
               }
               return capa;
+          }
+//</editor-fold>
+//<editor-fold desc="funções de exclusão">
+          public boolean excluirFilme(String titulo){
+              try {
+                  String sql="delete from filme where titulo='"+titulo+"'";
+                  PreparedStatement ps=getCon().prepareStatement(sql);
+                  ps.executeUpdate();
+                  return true;
+              } catch (Exception e) {
+                  return false;
+              }
           }
 //</editor-fold>
 }

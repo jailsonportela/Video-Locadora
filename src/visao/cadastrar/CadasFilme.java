@@ -118,7 +118,7 @@ private void preencherCategoria(){
         txtDuracao.setBackground(new java.awt.Color(95, 103, 105));
         txtDuracao.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
         txtDuracao.setForeground(new java.awt.Color(202, 191, 171));
-        txtDuracao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("mmm:ss"))));
+        txtDuracao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
         txtDuracao.setCaretColor(new java.awt.Color(202, 191, 171));
         txtDuracao.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 

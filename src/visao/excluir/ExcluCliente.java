@@ -69,7 +69,9 @@ public class ExcluCliente extends javax.swing.JFrame implements Funcoes{
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(202, 191, 171));
         jButton1.setText("Cancelar");
+        jButton1.setContentAreaFilled(false);
         jButton1.setFocusPainted(false);
+        jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -80,7 +82,9 @@ public class ExcluCliente extends javax.swing.JFrame implements Funcoes{
         jButton2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(202, 191, 171));
         jButton2.setText("Ok");
+        jButton2.setContentAreaFilled(false);
         jButton2.setFocusPainted(false);
+        jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
