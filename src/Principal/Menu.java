@@ -2,6 +2,7 @@
 package Principal;
 
 import Locacao.ControleLocacao;
+import Locacao.EfetuarDevolucao;
 import Principal.funcoes.Funcoes;
 import visao.alterar.AlterCliente;
 import visao.cadastrar.CadasCategoria;
@@ -28,9 +29,8 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         panel = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton3 = jbuttonPadrao("Sair");
+        jButton2 = jbuttonPadrao("Devolução");
         jLabel1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
@@ -77,48 +77,23 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
 
         panel.setBackground(new java.awt.Color(95, 103, 105));
 
-        jButton3.setBackground(new java.awt.Color(65, 68, 75));
-        jButton3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(202, 191, 171));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logout.png"))); // NOI18N
-        jButton3.setText("Sair");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setIconTextGap(5);
-        jButton3.setOpaque(true);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(65, 68, 75));
-        jButton2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(202, 191, 171));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/troca.png"))); // NOI18N
-        jButton2.setText("Devolução");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setIconTextGap(5);
-        jButton2.setOpaque(true);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jButton1.setBackground(new java.awt.Color(65, 68, 75));
-        jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(202, 191, 171));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/vender filme.png"))); // NOI18N
-        jButton1.setText("Locação");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
         jButton1.setIconTextGap(5);
-        jButton1.setInheritsPopupMenu(true);
-        jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -371,10 +346,14 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         transita(this,new ExcluFilme());
     }//GEN-LAST:event_jMenuItem24ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        transita(this, new EfetuarDevolucao());
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
-    private javax.swing.JButton jButton1;
+    private final javax.swing.JButton jButton1 = jbuttonPadrao("Locação");
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;

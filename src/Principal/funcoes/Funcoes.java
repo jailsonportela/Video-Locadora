@@ -3,17 +3,23 @@ package Principal.funcoes;
 
 import DAO.FuncionarioDAO;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Insets;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import javax.swing.border.BevelBorder;
 
 public interface Funcoes{
+    Color cabfab=new Color(202,191,171);
+    Color back=new Color(95,103,105);
     //Resolução padrão JFrames
     public default void resolucaoPadrao(JFrame frame){
         String funcionario_nome=new FuncionarioDAO().funcionarioAtual();
@@ -25,14 +31,61 @@ public interface Funcoes{
     }
     //estética padrao de JPanel
         public default void JPanelPadrao(JPanel panel){
-            panel.setBackground(new Color(95,103,105));
-       panel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(202, 191, 171), 10),
+            panel.setBackground(back);
+       panel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(cabfab, 10),
                BorderFactory.createBevelBorder(BevelBorder.RAISED)));
     }
     //apaga campos (Superclasse JTextField ou classes filhas)
     public default void apagarCampos(JTextField...fields){
         for(JTextField txt:fields)txt.setText("");
     }
+    //estética jbutton padrão
+    public default JButton jbuttonPadrao(String nome){
+        JButton button=new JButton();
+        button.setMargin(new Insets(2,14,2,14));
+        button.setFont(new Font("Arial Black",0,14));
+        button.setBorderPainted(true);
+        button.setBorder(null);
+        button.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        button.setBackground(new Color(65,68,75));
+        button.setForeground(cabfab);
+        button.setContentAreaFilled(false);
+        button.setOpaque(true);
+        button.setIconTextGap(5);
+        button.setText(nome);
+        button.setFocusPainted(true);
+        
+        return button;
+    }
+    //<editor-fold desc="estética campos padrão">
+    public default JTextField jTextFieldPadrao(){
+        JTextField field=new JTextField();
+        field.setCaretColor(cabfab);
+        field.setForeground(cabfab);
+        field.setBorder(BorderFactory.createMatteBorder(0,0,2,0,cabfab));
+        field.setFont(new Font("Arial",0,14));
+        field.setBackground(back);
+                return field;
+    }
+    public default JPasswordField jPasswordPadrao(){
+        JPasswordField field=new JPasswordField();
+        field.setCaretColor(cabfab);
+        field.setForeground(cabfab);
+        field.setBorder(BorderFactory.createMatteBorder(0,0,2,0,cabfab));
+        field.setFont(new Font("Arial",0,14));
+        field.setBackground(back);
+                return field;
+    }
+        public default JFormattedTextField jJFormattedTextFieldPadrao(){
+        JFormattedTextField field=new JFormattedTextField();
+        field.setCaretColor(cabfab);
+        field.setForeground(cabfab);
+        field.setBorder(BorderFactory.createMatteBorder(0,0,2,0,cabfab));
+        field.setFont(new Font("Arial",0,14));
+        field.setBackground(back);
+                return field;
+    }
+    //</editor-fold>
     //Transita entre JFrames
     public default void transita(JFrame from,JFrame to){
         from.dispose();

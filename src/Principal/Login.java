@@ -4,7 +4,6 @@ package Principal;
 import DAO.Conexao;
 import DAO.FuncionarioDAO;
 import Principal.funcoes.Funcoes;
-import java.sql.Connection;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -22,16 +21,16 @@ public class Login extends JFrame implements Funcoes{
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnSair = new javax.swing.JButton();
+        btnSair = jbuttonPadrao("Sair");
         jProgressBar = new javax.swing.JProgressBar();
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jLabel1 = new javax.swing.JLabel();
-        txtLogin = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JPasswordField();
-        btnEntrar = new javax.swing.JButton();
+        txtLogin = jTextFieldPadrao();
+        txtSenha = jPasswordPadrao();
+        btnEntrar = jbuttonPadrao("Entrar");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Video Locadora");
@@ -50,15 +49,6 @@ public class Login extends JFrame implements Funcoes{
         jLabel3.setLabelFor(txtSenha);
         jLabel3.setText("Senha:");
 
-        btnSair.setBackground(new java.awt.Color(65, 68, 75));
-        btnSair.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(202, 191, 171));
-        btnSair.setText("Sair");
-        btnSair.setBorder(null);
-        btnSair.setContentAreaFilled(false);
-        btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnSair.setFocusPainted(false);
-        btnSair.setOpaque(true);
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
@@ -80,25 +70,10 @@ public class Login extends JFrame implements Funcoes{
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jLabel1.setIconTextGap(7);
 
-        txtLogin.setBackground(new java.awt.Color(95, 103, 105));
-        txtLogin.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtLogin.setForeground(new java.awt.Color(202, 191, 171));
-        txtLogin.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtLogin.setCaretColor(new java.awt.Color(202, 191, 171));
+        txtLogin.setText("qwe");
 
-        txtSenha.setBackground(new java.awt.Color(95, 103, 105));
-        txtSenha.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtSenha.setForeground(new java.awt.Color(202, 191, 171));
-        txtSenha.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtSenha.setCaretColor(new java.awt.Color(202, 191, 171));
+        txtSenha.setText("1234");
 
-        btnEntrar.setBackground(new java.awt.Color(65, 68, 75));
-        btnEntrar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        btnEntrar.setForeground(new java.awt.Color(202, 191, 171));
-        btnEntrar.setText("Entrar");
-        btnEntrar.setContentAreaFilled(false);
-        btnEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEntrar.setOpaque(true);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
