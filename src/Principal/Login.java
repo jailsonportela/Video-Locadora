@@ -13,7 +13,6 @@ public class Login extends JFrame implements Funcoes{
         initComponents();
         resolucaoPadrao(this);
         this.setTitle("Video Locadora");
-        JPanelPadrao(panel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -34,8 +33,6 @@ public class Login extends JFrame implements Funcoes{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Video Locadora");
-
-        panel.setPreferredSize(new java.awt.Dimension(404, 2177));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(202, 191, 171));
@@ -208,7 +205,7 @@ System.exit(0);
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JProgressBar jProgressBar;
-    private final javax.swing.JPanel panel = new javax.swing.JPanel();
+    private final javax.swing.JPanel panel = JPanelPadrao();
     public static javax.swing.JTextField txtLogin;
     public static javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables

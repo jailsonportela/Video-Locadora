@@ -25,15 +25,17 @@ public interface Funcoes{
         String funcionario_nome=new FuncionarioDAO().funcionarioAtual();
         frame.setTitle("Video Locadora - "+funcionario_nome);
         frame.setPreferredSize(new Dimension(800,450));
-        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(2);
         frame.setSize(800,450);
         frame.setLocationRelativeTo(null);
     }
     //estética padrao de JPanel
-        public default void JPanelPadrao(JPanel panel){
-            panel.setBackground(back);
-       panel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(cabfab, 10),
-               BorderFactory.createBevelBorder(BevelBorder.RAISED)));
+        public default JPanel JPanelPadrao(){
+          JPanel panel=new JPanel();
+          panel.setBackground(back);
+          panel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(cabfab, 10),
+          BorderFactory.createBevelBorder(BevelBorder.RAISED)));
+       return panel;
     }
     //apaga campos (Superclasse JTextField ou classes filhas)
     public default void apagarCampos(JTextField...fields){
@@ -42,7 +44,7 @@ public interface Funcoes{
     //estética jbutton padrão
     public default JButton jbuttonPadrao(String nome){
         JButton button=new JButton();
-        button.setMargin(new Insets(2,14,2,14));
+        button.setMargin(new Insets(14,14,14,14));
         button.setFont(new Font("Arial Black",0,14));
         button.setBorderPainted(true);
         button.setBorder(null);

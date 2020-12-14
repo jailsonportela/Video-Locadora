@@ -19,7 +19,6 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
     public Menu() {
         initComponents();
         resolucaoPadrao(this);
-         JPanelPadrao(panel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -28,7 +27,6 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
-        panel = new javax.swing.JPanel();
         jButton3 = jbuttonPadrao("Sair");
         jButton2 = jbuttonPadrao("Devolução");
         jLabel1 = new javax.swing.JLabel();
@@ -74,8 +72,6 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         setTitle("Video Locadora");
         setBackground(new java.awt.Color(163, 183, 196));
         setSize(new java.awt.Dimension(600, 399));
-
-        panel.setBackground(new java.awt.Color(95, 103, 105));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logout.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -389,6 +385,6 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     // End of variables declaration//GEN-END:variables
 }

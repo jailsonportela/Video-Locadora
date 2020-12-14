@@ -7,13 +7,11 @@ public class EfetuarDevolucao extends javax.swing.JFrame implements Funcoes{
     public EfetuarDevolucao() {
         resolucaoPadrao(this);
         initComponents();
-         JPanelPadrao(panel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -29,9 +27,6 @@ public class EfetuarDevolucao extends javax.swing.JFrame implements Funcoes{
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        panel.setBackground(new java.awt.Color(95, 103, 105));
-        panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(202, 191, 171));
@@ -216,7 +211,7 @@ public class EfetuarDevolucao extends javax.swing.JFrame implements Funcoes{
                                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 31, Short.MAX_VALUE)))
+                        .addGap(0, 35, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -254,7 +249,7 @@ public class EfetuarDevolucao extends javax.swing.JFrame implements Funcoes{
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     private final javax.swing.JFormattedTextField txtCodigoAluguel = jJFormattedTextFieldPadrao();
     private final javax.swing.JFormattedTextField txtCodigoCategoria = jJFormattedTextFieldPadrao();
     private final javax.swing.JFormattedTextField txtCodigoCategoria1 = jJFormattedTextFieldPadrao();

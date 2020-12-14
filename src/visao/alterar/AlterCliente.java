@@ -6,7 +6,6 @@ import DAO.Conexao;
 import Modelo.Cliente;
 import Principal.Menu;
 import Principal.funcoes.Funcoes;
-import java.awt.Dimension;
 import java.sql.Connection;
 import java.util.List;
 import javax.swing.JFrame;
@@ -16,8 +15,6 @@ public class AlterCliente extends JFrame implements Funcoes{
     public AlterCliente() {
         resolucaoPadrao(this);
         initComponents();
-         JPanelPadrao(panel);
-
     }
     private void inserirDados(int cod){
         ClienteDAO sql=new ClienteDAO();
@@ -41,21 +38,16 @@ public class AlterCliente extends JFrame implements Funcoes{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtPesquisarCodigo = new javax.swing.JFormattedTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        txtNovoCodigo = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton1 = jbuttonPadrao("Limpar");
+        jButton2 = jbuttonPadrao("Alterar");
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        txtRG = new javax.swing.JFormattedTextField();
         txtCPF = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JFormattedTextField();
@@ -71,12 +63,11 @@ public class AlterCliente extends JFrame implements Funcoes{
         txtCEP = new javax.swing.JFormattedTextField();
         jLabel14 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButton3 = jbuttonPadrao("Cancelar");
+        jButton4 = jbuttonPadrao(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setBackground(new java.awt.Color(95, 103, 105));
         panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
@@ -88,12 +79,7 @@ public class AlterCliente extends JFrame implements Funcoes{
         jLabel2.setForeground(new java.awt.Color(202, 191, 171));
         jLabel2.setText("Código do Funcionário:");
 
-        txtPesquisarCodigo.setBackground(new java.awt.Color(95, 103, 105));
-        txtPesquisarCodigo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtPesquisarCodigo.setForeground(new java.awt.Color(202, 191, 171));
         txtPesquisarCodigo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtPesquisarCodigo.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtPesquisarCodigo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jPanel3.setBackground(new java.awt.Color(95, 103, 105));
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 0, 0, 0, new java.awt.Color(202, 191, 171)));
@@ -102,22 +88,11 @@ public class AlterCliente extends JFrame implements Funcoes{
         jLabel3.setForeground(new java.awt.Color(202, 191, 171));
         jLabel3.setText("Código:");
 
-        txtNovoCodigo.setBackground(new java.awt.Color(95, 103, 105));
-        txtNovoCodigo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNovoCodigo.setForeground(new java.awt.Color(202, 191, 171));
         txtNovoCodigo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtNovoCodigo.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtNovoCodigo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(202, 191, 171));
         jLabel4.setText("Nome:");
-
-        txtNome.setBackground(new java.awt.Color(95, 103, 105));
-        txtNome.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(202, 191, 171));
-        txtNome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNome.setCaretColor(new java.awt.Color(202, 191, 171));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(202, 191, 171));
@@ -127,38 +102,24 @@ public class AlterCliente extends JFrame implements Funcoes{
         jLabel6.setForeground(new java.awt.Color(202, 191, 171));
         jLabel6.setText("CPF:");
 
-        jButton1.setBackground(new java.awt.Color(65, 68, 75));
-        jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(202, 191, 171));
-        jButton1.setText("Limpar");
-        jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(65, 68, 75));
-        jButton2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(202, 191, 171));
-        jButton2.setText("Alterar");
-        jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        txtRG.setBackground(new java.awt.Color(95, 103, 105));
-        txtRG.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtRG.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtRG.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtRG.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtRG.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txtRG.setFont(new java.awt.Font("Calibri", 0, 14));
 
         txtCPF.setBackground(new java.awt.Color(95, 103, 105));
         txtCPF.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
@@ -257,12 +218,6 @@ public class AlterCliente extends JFrame implements Funcoes{
         txtEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
         txtEmail.setCaretColor(new java.awt.Color(202, 191, 171));
 
-        jButton3.setBackground(new java.awt.Color(65, 68, 75));
-        jButton3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(202, 191, 171));
-        jButton3.setText("Cancelar");
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -387,12 +342,7 @@ public class AlterCliente extends JFrame implements Funcoes{
                 .addContainerGap())
         );
 
-        jButton4.setBackground(new java.awt.Color(65, 68, 75));
-        jButton4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(202, 191, 171));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loupe.png"))); // NOI18N
-        jButton4.setBorderPainted(false);
-        jButton4.setFocusPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -423,10 +373,10 @@ public class AlterCliente extends JFrame implements Funcoes{
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtPesquisarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtPesquisarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -531,17 +481,17 @@ public class AlterCliente extends JFrame implements Funcoes{
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     private javax.swing.JTextField txtBairro;
     private javax.swing.JFormattedTextField txtCEP;
     private javax.swing.JFormattedTextField txtCPF;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JFormattedTextField txtNascimento;
-    private javax.swing.JTextField txtNome;
-    private javax.swing.JFormattedTextField txtNovoCodigo;
+    private final javax.swing.JTextField txtNome = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtNovoCodigo = jJFormattedTextFieldPadrao();
     private javax.swing.JFormattedTextField txtNumero;
-    private javax.swing.JFormattedTextField txtPesquisarCodigo;
-    private javax.swing.JFormattedTextField txtRG;
+    private final javax.swing.JFormattedTextField txtPesquisarCodigo = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtRG = jJFormattedTextFieldPadrao();
     private javax.swing.JTextField txtRua;
     private javax.swing.JFormattedTextField txtTelefone;
     // End of variables declaration//GEN-END:variables

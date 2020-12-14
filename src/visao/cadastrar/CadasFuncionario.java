@@ -19,25 +19,21 @@ public class CadasFuncionario extends javax.swing.JFrame implements Funcoes{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtLogin = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        txtLogin = jTextFieldPadrao();
+        txtSenha = jPasswordPadrao();
+        jButton1 = jbuttonPadrao("Limpar");
+        jButton2 = jbuttonPadrao("Cancelar");
+        jButton3 = jbuttonPadrao("Cadastrar");
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        txtNome = new javax.swing.JTextField();
+        txtNome = jTextFieldPadrao();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(202, 191, 171));
-
-        panel.setBackground(new java.awt.Color(95, 103, 105));
-        panel.setForeground(new java.awt.Color(202, 191, 171));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(202, 191, 171));
@@ -61,62 +57,23 @@ public class CadasFuncionario extends javax.swing.JFrame implements Funcoes{
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Nome:");
 
-        txtLogin.setBackground(new java.awt.Color(95, 103, 105));
-        txtLogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtLogin.setForeground(new java.awt.Color(202, 191, 171));
-        txtLogin.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtLogin.setCaretColor(new java.awt.Color(202, 191, 171));
-
-        txtSenha.setBackground(new java.awt.Color(95, 103, 105));
-        txtSenha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtSenha.setForeground(new java.awt.Color(202, 191, 171));
-        txtSenha.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtSenha.setCaretColor(new java.awt.Color(202, 191, 171));
-
-        jButton1.setBackground(new java.awt.Color(65, 68, 75));
-        jButton1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(202, 191, 171));
-        jButton1.setText("Limpar");
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(65, 68, 75));
-        jButton2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(202, 191, 171));
-        jButton2.setText("Cancelar");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(65, 68, 75));
-        jButton3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(202, 191, 171));
-        jButton3.setText("Cadastrar");
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setOpaque(true);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        txtNome.setBackground(new java.awt.Color(95, 103, 105));
-        txtNome.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(202, 191, 171));
-        txtNome.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNome.setCaretColor(new java.awt.Color(202, 191, 171));
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
@@ -178,7 +135,7 @@ public class CadasFuncionario extends javax.swing.JFrame implements Funcoes{
                             .addComponent(jButton1)
                             .addComponent(jButton2)
                             .addComponent(jButton3))
-                        .addGap(0, 38, Short.MAX_VALUE)))
+                        .addGap(0, 60, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -247,7 +204,7 @@ public class CadasFuncionario extends javax.swing.JFrame implements Funcoes{
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     private javax.swing.JTextField txtLogin;
     private javax.swing.JTextField txtNome;
     private javax.swing.JPasswordField txtSenha;

@@ -10,13 +10,11 @@ public class ConsultaDevolucao extends JFrame implements Funcoes{
     public ConsultaDevolucao() {
         resolucaoPadrao(this);
         initComponents();
-         JPanelPadrao(panel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -24,9 +22,6 @@ public class ConsultaDevolucao extends JFrame implements Funcoes{
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        panel.setBackground(new java.awt.Color(95, 103, 105));
-        panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jTable1.setBackground(new java.awt.Color(65, 68, 75));
         jTable1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -100,7 +95,7 @@ public class ConsultaDevolucao extends JFrame implements Funcoes{
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                         .addComponent(jButton1)))
                 .addContainerGap())
         );
@@ -117,7 +112,7 @@ public class ConsultaDevolucao extends JFrame implements Funcoes{
                         .addContainerGap()
                         .addComponent(jButton1)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -148,6 +143,6 @@ public class ConsultaDevolucao extends JFrame implements Funcoes{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     // End of variables declaration//GEN-END:variables
 }

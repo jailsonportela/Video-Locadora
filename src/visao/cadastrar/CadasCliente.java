@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package visao.cadastrar;
 
 import DAO.ClienteDAO;
@@ -19,56 +15,32 @@ public class CadasCliente extends JFrame implements Funcoes{
     public CadasCliente() {
         resolucaoPadrao(this);
         initComponents();
-         JPanelPadrao(panel);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtNomeCliente = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtTelefoneCliente = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtNascimentoCliente = new javax.swing.JFormattedTextField();
-        txtRGCliente = new javax.swing.JFormattedTextField();
-        txtCPFCliente = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
-        txtRuaCliente = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtNumeroCliente = new javax.swing.JFormattedTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtBairroCliente = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtCEPCliente = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
-        limpar = new javax.swing.JButton();
-        cadastrar = new javax.swing.JButton();
-        cancelar = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jLabel11 = new javax.swing.JLabel();
-        txtEmailCliente = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(0, 400));
-
-        panel.setBackground(new java.awt.Color(95, 103, 105));
-        panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(202, 191, 171));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Nome:");
-
-        txtNomeCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtNomeCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        txtNomeCliente.setForeground(new java.awt.Color(202, 191, 171));
-        txtNomeCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNomeCliente.setCaretColor(new java.awt.Color(202, 191, 171));
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(202, 191, 171));
@@ -85,77 +57,46 @@ public class CadasCliente extends JFrame implements Funcoes{
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Telefone:");
 
-        txtTelefoneCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtTelefoneCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtTelefoneCliente.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtTelefoneCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####*-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefoneCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtTelefoneCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(202, 191, 171));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Nascimento:");
 
-        txtNascimentoCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtNascimentoCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNascimentoCliente.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtNascimentoCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtNascimentoCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtNascimentoCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
-        txtRGCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtRGCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtRGCliente.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtRGCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtRGCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtRGCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
-        txtCPFCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtCPFCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCPFCliente.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtCPFCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.##-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCPFCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCPFCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(202, 191, 171));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Rua:");
 
-        txtRuaCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtRuaCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        txtRuaCliente.setForeground(new java.awt.Color(202, 191, 171));
-        txtRuaCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtRuaCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-
         jLabel8.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(202, 191, 171));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("N°:");
 
-        txtNumeroCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtNumeroCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNumeroCliente.setForeground(new java.awt.Color(202, 191, 171));
         txtNumeroCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtNumeroCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtNumeroCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(202, 191, 171));
@@ -163,7 +104,7 @@ public class CadasCliente extends JFrame implements Funcoes{
         jLabel9.setText("Bairro:");
 
         txtBairroCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtBairroCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txtBairroCliente.setFont(new java.awt.Font("Calibri", 0, 18));
         txtBairroCliente.setForeground(new java.awt.Color(202, 191, 171));
         txtBairroCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
         txtBairroCliente.setCaretColor(new java.awt.Color(202, 191, 171));
@@ -173,61 +114,29 @@ public class CadasCliente extends JFrame implements Funcoes{
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("CEP:");
 
-        txtCEPCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtCEPCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCEPCliente.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtCEPCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCEPCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCEPCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(202, 191, 171));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Cadastro de Cliente");
 
-        limpar.setBackground(new java.awt.Color(65, 68, 75));
-        limpar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        limpar.setForeground(new java.awt.Color(202, 191, 171));
-        limpar.setText("Limpar");
-        limpar.setBorderPainted(false);
-        limpar.setContentAreaFilled(false);
-        limpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        limpar.setFocusPainted(false);
-        limpar.setOpaque(true);
         limpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limparActionPerformed(evt);
             }
         });
 
-        cadastrar.setBackground(new java.awt.Color(65, 68, 75));
-        cadastrar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        cadastrar.setForeground(new java.awt.Color(202, 191, 171));
-        cadastrar.setText("Cadastrar");
-        cadastrar.setBorderPainted(false);
-        cadastrar.setContentAreaFilled(false);
-        cadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cadastrar.setFocusPainted(false);
-        cadastrar.setOpaque(true);
         cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarActionPerformed(evt);
             }
         });
 
-        cancelar.setBackground(new java.awt.Color(65, 68, 75));
-        cancelar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        cancelar.setForeground(new java.awt.Color(202, 191, 171));
-        cancelar.setText("Cancelar");
-        cancelar.setBorderPainted(false);
-        cancelar.setContentAreaFilled(false);
-        cancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cancelar.setFocusPainted(false);
-        cancelar.setOpaque(true);
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
@@ -238,19 +147,13 @@ public class CadasCliente extends JFrame implements Funcoes{
         jLabel11.setForeground(new java.awt.Color(202, 191, 171));
         jLabel11.setText("E-mail:");
 
-        txtEmailCliente.setBackground(new java.awt.Color(95, 103, 105));
-        txtEmailCliente.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        txtEmailCliente.setForeground(new java.awt.Color(202, 191, 171));
-        txtEmailCliente.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtEmailCliente.setCaretColor(new java.awt.Color(202, 191, 171));
-
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelLayout.createSequentialGroup()
-                .addComponent(filler2, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addComponent(filler2, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panelLayout.createSequentialGroup()
@@ -304,7 +207,7 @@ public class CadasCliente extends JFrame implements Funcoes{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtNumeroCliente)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panelLayout.setVerticalGroup(
@@ -353,7 +256,7 @@ public class CadasCliente extends JFrame implements Funcoes{
                             .addComponent(limpar)
                             .addComponent(cadastrar)
                             .addComponent(cancelar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE))
                     .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(filler2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -428,8 +331,8 @@ public static void main(String[] args){
     });
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastrar;
-    private javax.swing.JButton cancelar;
+    private final javax.swing.JButton cadastrar = jbuttonPadrao("Cadastrar");
+    private final javax.swing.JButton cancelar = jbuttonPadrao("Cancelar");
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JLabel jLabel1;
@@ -443,17 +346,17 @@ public static void main(String[] args){
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JButton limpar;
-    private javax.swing.JPanel panel;
-    private javax.swing.JTextField txtBairroCliente;
-    private javax.swing.JFormattedTextField txtCEPCliente;
-    private javax.swing.JFormattedTextField txtCPFCliente;
-    private javax.swing.JTextField txtEmailCliente;
-    private javax.swing.JFormattedTextField txtNascimentoCliente;
-    private javax.swing.JTextField txtNomeCliente;
-    private javax.swing.JFormattedTextField txtNumeroCliente;
-    private javax.swing.JFormattedTextField txtRGCliente;
-    private javax.swing.JTextField txtRuaCliente;
-    private javax.swing.JFormattedTextField txtTelefoneCliente;
+    private final javax.swing.JButton limpar = jbuttonPadrao("Limpar");
+    private final javax.swing.JPanel panel = JPanelPadrao();
+    private final javax.swing.JTextField txtBairroCliente = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCEPCliente = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCPFCliente = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtEmailCliente = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtNascimentoCliente = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtNomeCliente = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtNumeroCliente = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtRGCliente = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtRuaCliente = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtTelefoneCliente = jJFormattedTextFieldPadrao();
     // End of variables declaration//GEN-END:variables
 }

@@ -21,7 +21,6 @@ public class CadasFilme extends javax.swing.JFrame implements Funcoes{
     public CadasFilme() {
         resolucaoPadrao(this);
         initComponents();
-         JPanelPadrao(panel);
         preencherClassificacoes();
         preencherCategoria();
     }
@@ -70,57 +69,30 @@ private void preencherCategoria(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtTitulo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtDuracao = new javax.swing.JFormattedTextField();
         cbCategoria = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cbClassificacao = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        txtCapa = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
         lblCapa = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        txtCodigoClassificacao = new javax.swing.JFormattedTextField();
-        txtCodigoCategoria1 = new javax.swing.JFormattedTextField();
-        txtAno = new javax.swing.JFormattedTextField();
         jLabel1 = new javax.swing.JLabel();
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel.setBackground(new java.awt.Color(95, 103, 105));
-        panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(202, 191, 171));
         jLabel2.setLabelFor(txtTitulo);
         jLabel2.setText("Título:");
 
-        txtTitulo.setBackground(new java.awt.Color(95, 103, 105));
-        txtTitulo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtTitulo.setForeground(new java.awt.Color(202, 191, 171));
-        txtTitulo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtTitulo.setCaretColor(new java.awt.Color(202, 191, 171));
-
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(202, 191, 171));
         jLabel3.setLabelFor(txtDuracao);
         jLabel3.setText("Duração:");
-
-        txtDuracao.setBackground(new java.awt.Color(95, 103, 105));
-        txtDuracao.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtDuracao.setForeground(new java.awt.Color(202, 191, 171));
-        txtDuracao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
-        txtDuracao.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtDuracao.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         cbCategoria.setBackground(new java.awt.Color(204, 204, 204));
         cbCategoria.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
@@ -156,21 +128,8 @@ private void preencherCategoria(){
         jLabel6.setText("Classificação:");
 
         txtCapa.setEditable(false);
-        txtCapa.setBackground(new java.awt.Color(95, 103, 105));
-        txtCapa.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtCapa.setForeground(new java.awt.Color(202, 191, 171));
-        txtCapa.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCapa.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCapa.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jButton4.setBackground(new java.awt.Color(65, 68, 75));
-        jButton4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(202, 191, 171));
-        jButton4.setText("Selecionar");
-        jButton4.setContentAreaFilled(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.setFocusPainted(false);
-        jButton4.setOpaque(true);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -180,42 +139,18 @@ private void preencherCategoria(){
         lblCapa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/movie.png"))); // NOI18N
 
-        jButton2.setBackground(new java.awt.Color(65, 68, 75));
-        jButton2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(202, 191, 171));
-        jButton2.setText("Cadastrar");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setFocusPainted(false);
-        jButton2.setOpaque(true);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(65, 68, 75));
-        jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(202, 191, 171));
-        jButton1.setText("Limpar");
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.setOpaque(true);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(65, 68, 75));
-        jButton3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(202, 191, 171));
-        jButton3.setText("Cancelar");
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setFocusPainted(false);
-        jButton3.setOpaque(true);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -227,38 +162,19 @@ private void preencherCategoria(){
         jLabel8.setLabelFor(txtDuracao);
         jLabel8.setText("Ano:");
 
-        txtCodigoClassificacao.setBackground(new java.awt.Color(95, 103, 105));
-        txtCodigoClassificacao.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCodigoClassificacao.setForeground(new java.awt.Color(202, 191, 171));
         txtCodigoClassificacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtCodigoClassificacao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtCodigoClassificacao.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCodigoClassificacao.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txtCodigoClassificacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoClassificacaoActionPerformed(evt);
             }
         });
 
-        txtCodigoCategoria1.setBackground(new java.awt.Color(95, 103, 105));
-        txtCodigoCategoria1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCodigoCategoria1.setForeground(new java.awt.Color(202, 191, 171));
         txtCodigoCategoria1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtCodigoCategoria1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtCodigoCategoria1.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCodigoCategoria1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txtCodigoCategoria1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoCategoria1ActionPerformed(evt);
             }
         });
-
-        txtAno.setBackground(new java.awt.Color(95, 103, 105));
-        txtAno.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtAno.setForeground(new java.awt.Color(202, 191, 171));
-        txtAno.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtAno.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtAno.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(202, 191, 171));
@@ -271,7 +187,7 @@ private void preencherCategoria(){
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(filler2, javax.swing.GroupLayout.DEFAULT_SIZE, 7, Short.MAX_VALUE)
+                .addComponent(filler2, javax.swing.GroupLayout.DEFAULT_SIZE, 8, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,7 +199,7 @@ private void preencherCategoria(){
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtTitulo))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                                        .addGap(0, 14, Short.MAX_VALUE)
+                                        .addGap(0, 15, Short.MAX_VALUE)
                                         .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                                                 .addComponent(jLabel6)
@@ -322,7 +238,7 @@ private void preencherCategoria(){
                         .addGap(1, 1, 1)))
                 .addComponent(lblCapa, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, 7, Short.MAX_VALUE)
+                .addComponent(filler3, javax.swing.GroupLayout.DEFAULT_SIZE, 9, Short.MAX_VALUE)
                 .addContainerGap())
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -466,10 +382,10 @@ private void preencherCategoria(){
     private javax.swing.JComboBox<String> cbClassificacao;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private final javax.swing.JButton jButton1 = jbuttonPadrao("Limpar");
+    private final javax.swing.JButton jButton2 = jbuttonPadrao("Cadastrar");
+    private final javax.swing.JButton jButton3 = jbuttonPadrao("Cancelar");
+    private final javax.swing.JButton jButton4 = jbuttonPadrao("Selecionar");
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -478,12 +394,12 @@ private void preencherCategoria(){
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel lblCapa;
-    private javax.swing.JPanel panel;
-    private javax.swing.JFormattedTextField txtAno;
-    private javax.swing.JTextField txtCapa;
-    private javax.swing.JFormattedTextField txtCodigoCategoria1;
-    private javax.swing.JFormattedTextField txtCodigoClassificacao;
-    private javax.swing.JFormattedTextField txtDuracao;
-    private javax.swing.JTextField txtTitulo;
+    private final javax.swing.JPanel panel = JPanelPadrao();
+    private final javax.swing.JFormattedTextField txtAno = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtCapa = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCodigoCategoria1 = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCodigoClassificacao = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtDuracao = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtTitulo = jTextFieldPadrao();
     // End of variables declaration//GEN-END:variables
 }

@@ -12,7 +12,6 @@ public class ExcluFilme extends javax.swing.JFrame implements Funcoes{
     public ExcluFilme() {
         resolucaoPadrao(this);
         initComponents();
-        JPanelPadrao(panel);
         preencherComboBox();
     }
     private void preencherComboBox(){
@@ -25,7 +24,6 @@ public class ExcluFilme extends javax.swing.JFrame implements Funcoes{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         cbNomeFilme = new javax.swing.JComboBox<>();
@@ -187,6 +185,6 @@ public class ExcluFilme extends javax.swing.JFrame implements Funcoes{
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel panel;
+    private final javax.swing.JPanel panel = JPanelPadrao();
     // End of variables declaration//GEN-END:variables
 }
