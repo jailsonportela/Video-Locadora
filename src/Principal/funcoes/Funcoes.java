@@ -20,6 +20,7 @@ import javax.swing.border.BevelBorder;
 public interface Funcoes{
     Color cabfab=new Color(202,191,171);
     Color back=new Color(95,103,105);
+    Color button_back=new Color(65,68,75);
     //Resolução padrão JFrames
     public default void resolucaoPadrao(JFrame frame){
         String funcionario_nome=new FuncionarioDAO().funcionarioAtual();
@@ -44,12 +45,11 @@ public interface Funcoes{
     //estética jbutton padrão
     public default JButton jbuttonPadrao(String nome){
         JButton button=new JButton();
-        button.setMargin(new Insets(14,14,14,14));
         button.setFont(new Font("Arial Black",0,14));
         button.setBorderPainted(true);
-        button.setBorder(null);
+        button.setBorder(BorderFactory.createLineBorder(button_back));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        button.setBackground(new Color(65,68,75));
+        button.setBackground(button_back);
         button.setForeground(cabfab);
         button.setContentAreaFilled(false);
         button.setOpaque(true);

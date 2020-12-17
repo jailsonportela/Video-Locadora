@@ -5,6 +5,7 @@ import Locacao.ControleLocacao;
 import Locacao.EfetuarDevolucao;
 import Principal.funcoes.Funcoes;
 import visao.alterar.AlterCliente;
+import visao.alterar.AlterFuncionario;
 import visao.cadastrar.CadasCategoria;
 import visao.cadastrar.CadasClassificacao;
 import visao.cadastrar.CadasCliente;
@@ -240,6 +241,11 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         jMenu3.add(jMenuItem15);
 
         jMenuItem16.setText("Funcionario");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem16);
 
         jMenuItem17.setText("DVD");
@@ -345,6 +351,10 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         transita(this, new EfetuarDevolucao());
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        transita(this,new AlterFuncionario());
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;

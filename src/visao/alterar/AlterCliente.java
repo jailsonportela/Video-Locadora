@@ -48,27 +48,17 @@ public class AlterCliente extends JFrame implements Funcoes{
         jButton1 = jbuttonPadrao("Limpar");
         jButton2 = jbuttonPadrao("Alterar");
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        txtCPF = new javax.swing.JFormattedTextField();
         jLabel7 = new javax.swing.JLabel();
-        txtTelefone = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
-        txtNascimento = new javax.swing.JFormattedTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtRua = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtNumero = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
-        txtBairro = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txtCEP = new javax.swing.JFormattedTextField();
         jLabel14 = new javax.swing.JLabel();
-        txtEmail = new javax.swing.JTextField();
         jButton3 = jbuttonPadrao("Cancelar");
         jButton4 = jbuttonPadrao(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(202, 191, 171));
@@ -121,102 +111,59 @@ public class AlterCliente extends JFrame implements Funcoes{
         }
         txtRG.setFont(new java.awt.Font("Calibri", 0, 14));
 
-        txtCPF.setBackground(new java.awt.Color(95, 103, 105));
-        txtCPF.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCPF.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.##-##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCPF.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCPF.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(202, 191, 171));
         jLabel7.setText("Telefone:");
 
-        txtTelefone.setBackground(new java.awt.Color(95, 103, 105));
-        txtTelefone.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtTelefone.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) ####*-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefone.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtTelefone.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(202, 191, 171));
         jLabel8.setText("Nascimento:");
 
-        txtNascimento.setBackground(new java.awt.Color(95, 103, 105));
-        txtNascimento.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNascimento.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtNascimento.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtNascimento.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(202, 191, 171));
         jLabel9.setText("Rua:");
 
-        txtRua.setBackground(new java.awt.Color(95, 103, 105));
-        txtRua.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtRua.setForeground(new java.awt.Color(202, 191, 171));
-        txtRua.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtRua.setCaretColor(new java.awt.Color(202, 191, 171));
-
         jLabel10.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(202, 191, 171));
         jLabel10.setText("Nº:");
 
-        txtNumero.setBackground(new java.awt.Color(95, 103, 105));
-        txtNumero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtNumero.setForeground(new java.awt.Color(202, 191, 171));
         txtNumero.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
-        txtNumero.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtNumero.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(202, 191, 171));
         jLabel11.setText("Bairro:");
 
-        txtBairro.setBackground(new java.awt.Color(95, 103, 105));
-        txtBairro.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtBairro.setForeground(new java.awt.Color(202, 191, 171));
-        txtBairro.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtBairro.setCaretColor(new java.awt.Color(202, 191, 171));
-
         jLabel12.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(202, 191, 171));
         jLabel12.setText("CEP:");
 
-        txtCEP.setBackground(new java.awt.Color(95, 103, 105));
-        txtCEP.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtCEP.setForeground(new java.awt.Color(202, 191, 171));
         try {
             txtCEP.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCEP.setCaretColor(new java.awt.Color(202, 191, 171));
-        txtCEP.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(202, 191, 171));
         jLabel14.setText("E-mail:");
-
-        txtEmail.setBackground(new java.awt.Color(95, 103, 105));
-        txtEmail.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txtEmail.setForeground(new java.awt.Color(202, 191, 171));
-        txtEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(202, 191, 171)));
-        txtEmail.setCaretColor(new java.awt.Color(202, 191, 171));
 
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,7 +177,7 @@ public class AlterCliente extends JFrame implements Funcoes{
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addComponent(filler1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -249,12 +196,6 @@ public class AlterCliente extends JFrame implements Funcoes{
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtNome))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
@@ -275,19 +216,29 @@ public class AlterCliente extends JFrame implements Funcoes{
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtCPF))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEmail)))
-                .addContainerGap(138, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(2, 2, 2)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(txtEmail))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,12 +284,11 @@ public class AlterCliente extends JFrame implements Funcoes{
                             .addComponent(jLabel14)
                             .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(12, 12, 12)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -363,7 +313,7 @@ public class AlterCliente extends JFrame implements Funcoes{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPesquisarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -482,17 +432,17 @@ public class AlterCliente extends JFrame implements Funcoes{
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private final javax.swing.JPanel panel = JPanelPadrao();
-    private javax.swing.JTextField txtBairro;
-    private javax.swing.JFormattedTextField txtCEP;
-    private javax.swing.JFormattedTextField txtCPF;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JFormattedTextField txtNascimento;
+    private final javax.swing.JTextField txtBairro = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCEP = jJFormattedTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtCPF = jJFormattedTextFieldPadrao();
+    private final javax.swing.JTextField txtEmail = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtNascimento = jJFormattedTextFieldPadrao();
     private final javax.swing.JTextField txtNome = jTextFieldPadrao();
     private final javax.swing.JFormattedTextField txtNovoCodigo = jJFormattedTextFieldPadrao();
-    private javax.swing.JFormattedTextField txtNumero;
+    private final javax.swing.JFormattedTextField txtNumero = jJFormattedTextFieldPadrao();
     private final javax.swing.JFormattedTextField txtPesquisarCodigo = jJFormattedTextFieldPadrao();
     private final javax.swing.JFormattedTextField txtRG = jJFormattedTextFieldPadrao();
-    private javax.swing.JTextField txtRua;
-    private javax.swing.JFormattedTextField txtTelefone;
+    private final javax.swing.JTextField txtRua = jTextFieldPadrao();
+    private final javax.swing.JFormattedTextField txtTelefone = jJFormattedTextFieldPadrao();
     // End of variables declaration//GEN-END:variables
 }
