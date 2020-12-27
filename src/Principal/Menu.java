@@ -12,6 +12,7 @@ import visao.cadastrar.CadasCliente;
 import visao.cadastrar.CadasDVD;
 import visao.cadastrar.CadasFilme;
 import visao.cadastrar.CadasFuncionario;
+import visao.consultar.ConsulCategoria;
 import visao.consultar.ConsulCliente;
 import visao.excluir.ExcluCliente;
 import visao.excluir.ExcluFilme;
@@ -208,6 +209,11 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
         jMenu2.add(jMenuItem7);
 
         jMenuItem8.setText("Categoria");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem8);
 
         jMenuItem9.setText("Classificacao");
@@ -355,6 +361,10 @@ public class Menu extends javax.swing.JFrame implements Funcoes{
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
         transita(this,new AlterFuncionario());
     }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        transita(this, new ConsulCategoria());
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
