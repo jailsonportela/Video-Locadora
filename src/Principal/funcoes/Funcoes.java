@@ -6,7 +6,6 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Insets;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -14,7 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 import javax.swing.border.BevelBorder;
 
 public interface Funcoes{
@@ -46,7 +44,7 @@ public interface Funcoes{
     public default JButton jbuttonPadrao(String nome){
         JButton button=new JButton();
         button.setFont(new Font("Arial Black",0,14));
-        button.setBorderPainted(true);
+        //button.setBorderPainted(true);
         button.setBorder(BorderFactory.createLineBorder(button_back));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBackground(button_back);

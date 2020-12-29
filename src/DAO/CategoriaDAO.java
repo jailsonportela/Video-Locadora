@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CategoriaDAO extends ExecuteSQL{
     
@@ -80,6 +81,16 @@ public String pegarONome(String codigo){
             e.getStackTrace();
             return null;
         }
+}
+public List<Categoria>pegarPorCodigo(int id){
+    return listaCategoria().stream()
+            .filter(c->c.getCodigo()==id)
+            .collect(Collectors.toList());
+}
+public List<Categoria>pegarPorNome(String nome){
+    return listaCategoria().stream()
+            .filter(c->c.getNome().contains(nome))
+            .collect(Collectors.toList());
 }
 //</editor-fold>
 }

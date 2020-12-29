@@ -1,14 +1,46 @@
 
 package visao.consultar;
 
+import DAO.CategoriaDAO;
+import DAO.Conexao;
+import Modelo.Categoria;
 import Principal.Menu;
 import Principal.funcoes.Funcoes;
+import java.sql.Connection;
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.swing.table.DefaultTableModel;
 
 public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
 
     public ConsulCategoria() {
         resolucaoPadrao(this);
         initComponents();
+        atualizaTable();
+    }
+    private void preencherTable(Connection con,List<Categoria> categorias){
+        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        while(model.getRowCount()>0)model.removeRow(0);
+        int i=0;
+        for(Categoria c:categorias){
+            model.addRow(new Object[i]);
+            jTable1.setValueAt(c.getCodigo(), i, 0);
+            jTable1.setValueAt(c.getNome(), i, 1);
+            i++;
+        }
+             Conexao.fecharConexao(con);
+    }
+    private void atualizaTable(){
+        CategoriaDAO c=new CategoriaDAO();
+        preencherTable(c.getCon(),c.listaCategoria());
+    }
+    private void pesquisarPorId(int id){
+        CategoriaDAO sql=new CategoriaDAO();
+        preencherTable(sql.getCon(),sql.pegarPorCodigo(id));
+    }
+    private void pesquisarPorNome(String nome){
+        CategoriaDAO c=new CategoriaDAO();
+        preencherTable(c.getCon(),c.pegarPorNome(nome));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -28,15 +60,27 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
         jLabel2.setText("Pesquisar por nome:");
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loupe.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/loupe.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
+        jTable1.setAutoCreateRowSorter(true);
+        jTable1.setBackground(new java.awt.Color(65, 68, 75));
+        jTable1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTable1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(202, 191, 171));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "ID", "Nome"
@@ -57,11 +101,20 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setGridColor(new java.awt.Color(202, 191, 171));
+        jTable1.setSelectionBackground(new java.awt.Color(202, 191, 171));
+        jTable1.setSelectionForeground(new java.awt.Color(65, 68, 75));
         jScrollPane1.setViewportView(jTable1);
 
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -72,7 +125,7 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -87,8 +140,10 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
                                 .addComponent(jButton2)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -99,15 +154,18 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
                     .addComponent(jButton1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel1)
-                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton2))
-                            .addComponent(jButton3))
+                                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))))
+                            .addComponent(jLabel2)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -131,10 +189,24 @@ public class ConsulCategoria extends javax.swing.JFrame implements Funcoes{
         transita(this, new Menu());
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int num=Integer.parseInt(jFormattedTextField1.getText());
+        pesquisarPorId(num);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        pesquisarPorNome(jTextField1.getText());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        atualizaTable();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private final javax.swing.JButton jButton1 = jbuttonPadrao("");
     private final javax.swing.JButton jButton2 = jbuttonPadrao("");
     private final javax.swing.JButton jButton3 = jbuttonPadrao("Cancelar");
+    private final javax.swing.JButton jButton4 = jbuttonPadrao("Todos");
     private final javax.swing.JFormattedTextField jFormattedTextField1 = jJFormattedTextFieldPadrao();
     private final javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
     private final javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
